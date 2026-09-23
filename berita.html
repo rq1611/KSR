@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <title>Berita | KSR PMI UNPAS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="icon" href="./img/ksr.png" />
 
     <!-- Bootstrap -->
@@ -13,145 +15,478 @@
     />
 
     <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <!-- NAVBAR -->
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-3">
       <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">
-          <img src="img/ksr.png" height="40" /> KSR PMI UNPAS
+          <img src="img/ksr.png" height="40" alt="Logo KSR PMI UNPAS" />
+          KSR PMI UNPAS
+        </a>
+
+        <a href="index.html" class="btn btn-outline-light ms-auto">
+          ← Kembali ke beranda
         </a>
       </div>
-      <a href="index.html" class="btn btn-outline-light ms-auto">
-        ← Kembali ke beranda
-      </a>
     </nav>
 
-    <!-- HEADER -->
+    <!-- =========================================
+         HEADER
+    ========================================== -->
     <section class="hero hero-sm">
       <div class="container text-center text-black">
         <h1 data-aos="fade-up">Berita & Informasi</h1>
+
         <p data-aos="fade-up" data-aos-delay="200">
           Kegiatan dan Informasi Terbaru KSR PMI UNPAS
         </p>
       </div>
     </section>
 
-    <!-- LIST BERITA -->
+    <!-- =========================================
+         DAFTAR BERITA
+    ========================================== -->
     <section class="py-5">
       <div class="container">
-        <div class="row g-4">
-          <!-- BERITA 1 -->
-          <div class="col-md-4" data-aos="fade-up">
-            <div class="card h-100 shadow" id="berita">
-              <img src="img/berita1.jpg" class="card-img-top" />
+
+        <!-- =====================================
+             SORTIR BERITA
+        ====================================== -->
+        <div class="d-flex justify-content-end align-items-center mb-4">
+          <label for="sortBerita" class="me-2 fw-semibold">
+            Urutkan:
+          </label>
+
+          <select
+            id="sortBerita"
+            class="form-select"
+            style="max-width: 240px"
+          >
+            <option value="default">Urutan Default</option>
+            <option value="terbaru">Terbaru → Terlama</option>
+            <option value="terlama">Terlama → Terbaru</option>
+          </select>
+        </div>
+
+        <!-- =====================================
+             GRID BERITA
+        ====================================== -->
+        <div class="row g-4" id="daftarBerita">
+
+          <!-- =================================
+               BERITA 1
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2025-12-09"
+            data-aos="fade-up"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita1.jpg"
+                class="card-img-top"
+                alt="Donor Darah Sukarela"
+              />
+
               <div class="card-body">
-                <small class="text-muted">9 Desember 2025</small>
-                <h5 class="mt-2">Donor Darah Sukarela</h5>
-                <p>Kegiatan donor darah sebagai bentuk kepedulian sosial.</p>
-                <a href="detail-berita.html?id=1" class="btn btn-danger btn-sm">
+                <small class="text-muted">
+                  9 Desember 2025
+                </small>
+
+                <h5 class="mt-2">
+                  Donor Darah Sukarela
+                </h5>
+
+                <p>
+                  Kegiatan donor darah sebagai bentuk kepedulian sosial.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=1"
+                  class="btn btn-danger btn-sm"
+                >
                   Baca Selengkapnya
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- BERITA 2 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-            <div class="card h-100 shadow" id="berita">
-              <img src="img/berita2.jpg" class="card-img-top" />
+          <!-- =================================
+               BERITA 2
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2025-02-17"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita2.jpg"
+                class="card-img-top"
+                alt="Pelatihan Vertical Rescue"
+              />
+
               <div class="card-body">
-                <small class="text-muted">27 Oktober 2025</small>
-                <h5 class="mt-2">Pelatihan Dasar Relawan Angkatan 31</h5>
-                <p>Pelatihan untuk meningkatkan kompetensi relawan baru.</p>
-                <a href="detail-berita.html?id=2" class="btn btn-danger btn-sm">
+                <small class="text-muted">
+                  17 Februari 2025
+                </small>
+
+                <h5 class="mt-2">
+                  Pelatihan Vertical Rescue
+                </h5>
+
+                <p>
+                  Pelatihan untuk meningkatkan kompetensi relawan baru.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=2"
+                  class="btn btn-danger btn-sm"
+                >
                   Baca Selengkapnya
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- BERITA 3 -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="card h-100 shadow" id="berita">
-              <img src="img/berita3.jpg" class="card-img-top" />
+          <!-- =================================
+               BERITA 3
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2026-01-30"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita3.jpeg"
+                class="card-img-top"
+                alt="Bencana Alam Cisarua"
+              />
+
               <div class="card-body">
-                <small class="text-muted">tanggal bulan tahun</small>
-                <h5 class="mt-2">KSR PMI UNPAS Siaga Bencana Alam</h5>
-                <p>Relawan diterjunkan untuk membantu korban bencana.</p>
-                <a href="detail-berita.html?id=3" class="btn btn-danger btn-sm">
+                <small class="text-muted">
+                  30 Januari 2026
+                </small>
+
+                <h5 class="mt-2">
+                  KSR PMI UNPAS Siaga Bencana Alam Cisarua
+                </h5>
+
+                <p>
+                  Relawan diterjunkan untuk membantu korban bencana.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=3"
+                  class="btn btn-danger btn-sm"
+                >
                   Baca Selengkapnya
                 </a>
               </div>
             </div>
           </div>
+
+          <!-- =================================
+               BERITA 4
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2026-05-30"
+            data-aos="fade-up"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita4.jpeg"
+                class="card-img-top"
+                alt="Pelatihan Water Rescue"
+              />
+
+              <div class="card-body">
+                <small class="text-muted">
+                  30 Mei 2026
+                </small>
+
+                <h5 class="mt-2">
+                  Pelatihan Water Rescue
+                </h5>
+
+                <p>
+                  Kegiatan pelatihan untuk meningkatkan keterampilan dan
+                  kesiapsiagaan relawan dalam menghadapi kondisi darurat
+                  di lingkungan perairan.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=4"
+                  class="btn btn-danger btn-sm"
+                >
+                  Baca Selengkapnya
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================
+               BERITA 5
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2025-08-29"
+            data-aos="fade-up"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita5.jpeg"
+                class="card-img-top"
+                alt="Pos Medis Aksi Demonstrasi"
+              />
+
+              <div class="card-body">
+                <small class="text-muted">
+                  29 Agustus 2025
+                </small>
+
+                <h5 class="mt-2">
+                  Pos Medis Aksi Demonstrasi
+                </h5>
+
+                <p>
+                  KSR PMI UNPAS menyiagakan Pos Medis untuk memberikan
+                  dukungan pertolongan pertama dan menjaga kesiapsiagaan
+                  kesehatan selama berlangsungnya aksi demonstrasi mahasiswa.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=5"
+                  class="btn btn-danger btn-sm"
+                >
+                  Baca Selengkapnya
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================
+               BERITA 6
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2025-12-05"
+            data-aos="fade-up"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita6.jpg"
+                class="card-img-top"
+                alt="Bencana Bojongsoang"
+              />
+
+              <div class="card-body">
+                <small class="text-muted">
+                  5 Desember 2025
+                </small>
+
+                <h5 class="mt-2">
+                  KSR PMI UNPAS Turun ke Bencana Bojongsoang
+                </h5>
+
+                <p>
+                  KSR PMI UNPAS turut turun membantu masyarakat terdampak
+                  banjir di Bojongsoang pada 5 Desember 2025 sebagai bentuk
+                  kepedulian dan pengabdian dalam kegiatan kemanusiaan.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=6"
+                  class="btn btn-danger btn-sm"
+                >
+                  Baca Selengkapnya
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================
+               BERITA 7
+          ================================== -->
+          <div
+            class="col-md-4 berita-item"
+            data-date="2026-06-26"
+            data-aos="fade-up"
+          >
+            <div class="card h-100 shadow">
+              <img
+                src="img/berita7.jpeg"
+                class="card-img-top"
+                alt="Hari Anti Narkotika Internasional"
+              />
+
+              <div class="card-body">
+                <small class="text-muted">
+                  26 Juni 2026
+                </small>
+
+                <h5 class="mt-2">
+                  Peringati Hari Anti Narkotika Internasional
+                </h5>
+
+                <p>
+                  Dalam rangka memperingati Hari Anti Narkotika Internasional
+                  (HANI), KSR PMI Unit Universitas Pasundan mengajak mahasiswa
+                  dan masyarakat untuk meningkatkan kesadaran akan bahaya
+                  penyalahgunaan narkotika serta pentingnya menjaga kesehatan
+                  dan menciptakan lingkungan yang sehat dan aman.
+                </p>
+
+                <a
+                  href="detail-berita.html?id=7"
+                  class="btn btn-danger btn-sm"
+                >
+                  Baca Selengkapnya
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
     <footer class="footer text-white pt-5">
       <div class="container">
         <div class="row g-4">
+
           <!-- LOGO & DESKRIPSI -->
           <div class="col-md-4">
             <div class="d-flex align-items-center mb-3">
-              <img src="img/ksr.png" height="50" class="me-2" />
-              <h5 class="fw-bold mb-0">KSR PMI UNPAS</h5>
+              <img
+                src="img/ksr.png"
+                height="50"
+                class="me-2"
+                alt="Logo KSR PMI UNPAS"
+              />
+
+              <h5 class="fw-bold mb-0">
+                KSR PMI UNPAS
+              </h5>
             </div>
+
             <p class="small">
-              Korps Sukarela PMI Unit Universitas Pasundan merupakan organisasi
-              kemanusiaan mahasiswa yang bergerak di bidang sosial, kesehatan,
-              dan kebencanaan.
+              Korps Sukarela PMI Unit Universitas Pasundan merupakan
+              organisasi kemanusiaan mahasiswa yang bergerak di bidang
+              sosial, kesehatan, dan kebencanaan.
             </p>
           </div>
 
           <!-- MENU -->
           <div class="col-md-4">
-            <h5 class="fw-bold mb-3">Menu</h5>
+            <h5 class="fw-bold mb-3">
+              Menu
+            </h5>
+
             <ul class="list-unstyled footer-link">
-              <li><a href="#beranda">Beranda</a></li>
-              <li><a href="#tentang">Tentang</a></li>
-              <li><a href="#kegiatan">Kegiatan</a></li>
-              <li><a href="berita.html">Berita</a></li>
-              <li><a href="struktur.html">Struktur Organisasi</a></li>
+              <li>
+                <a href="index.html#beranda">
+                  Beranda
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#tentang">
+                  Tentang
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#kegiatan">
+                  Kegiatan
+                </a>
+              </li>
+
+              <li>
+                <a href="berita.html">
+                  Berita
+                </a>
+              </li>
+
+              <li>
+                <a href="struktur.html">
+                  Struktur Organisasi
+                </a>
+              </li>
             </ul>
           </div>
 
           <!-- KONTAK -->
           <div class="col-md-4">
-            <h5 class="fw-bold mb-3">Kontak Kami</h5>
+            <h5 class="fw-bold mb-3">
+              Kontak Kami
+            </h5>
+
             <ul class="list-unstyled small">
+
               <li class="mb-2">
-                📍 Universitas Pasundan, Jl. Tamansari No.6, RW.8, Tamansari,
-                Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40116
+                📍 Universitas Pasundan, Jl. Tamansari No.6, RW.8,
+                Tamansari, Kec. Bandung Wetan, Kota Bandung,
+                Jawa Barat 40116
               </li>
-              <li class="mb-2">✉️ ksrunpas@gmail.com</li>
-              <li class="mb-2">📞 +62 85624956109</li>
+
+              <li class="mb-2">
+                ✉️ ksrunpas@gmail.com
+              </li>
+
+              <li class="mb-2">
+                📞 +62 85624956109
+              </li>
+
             </ul>
 
             <!-- SOSIAL MEDIA -->
             <div class="footer-social mt-3">
+
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/ksrunpas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 class="me-3"
-                >Instagram</a
               >
+                Instagram
+              </a>
+
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.facebook.com/KsrPmiUnitUnpas/?locale=id_ID"
                 class="me-3"
-                >Facebook</a
               >
+                Facebook
+              </a>
+
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.youtube.com/@ksrunpas8325/videos?app=desktop"
-                >YouTube</a
               >
+                YouTube
+              </a>
+
             </div>
           </div>
         </div>
@@ -159,13 +494,98 @@
         <hr class="border-light mt-4" />
 
         <div class="text-center small pb-3">
-          © 2026 KSR PMI Unit Universitas Pasundan. All Rights Reserved.
+          © 2026 KSR PMI Unit Universitas Pasundan.
+          All Rights Reserved.
         </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- =========================================
+         BOOTSTRAP JS
+    ========================================== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- =========================================
+         AOS JS
+    ========================================== -->
+    <script
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+    ></script>
+
+    <!-- =========================================
+         CUSTOM JS
+    ========================================== -->
     <script src="js/script.js"></script>
+
+    <!-- =========================================
+         SORTIR BERITA BERDASARKAN TANGGAL
+    ========================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sortBerita = document.getElementById("sortBerita");
+        const containerBerita = document.getElementById("daftarBerita");
+
+        // Jika elemen tidak ditemukan, hentikan script
+        if (!sortBerita || !containerBerita) {
+          return;
+        }
+
+        // Menyimpan urutan berita ketika pertama kali halaman dibuka
+        const beritaAwal = Array.from(
+          containerBerita.querySelectorAll(".berita-item")
+        );
+
+        // Ketika pilihan sortir berubah
+        sortBerita.addEventListener("change", function () {
+          const pilihan = this.value;
+
+          // Ambil semua berita
+          let berita = Array.from(
+            containerBerita.querySelectorAll(".berita-item")
+          );
+
+          // =====================================
+          // URUTAN DEFAULT
+          // =====================================
+          if (pilihan === "default") {
+            berita = beritaAwal;
+          }
+
+          // =====================================
+          // TERBARU → TERLAMA
+          // =====================================
+          else if (pilihan === "terbaru") {
+            berita.sort(function (a, b) {
+              const tanggalA = new Date(a.dataset.date);
+              const tanggalB = new Date(b.dataset.date);
+
+              return tanggalB - tanggalA;
+            });
+          }
+
+          // =====================================
+          // TERLAMA → TERBARU
+          // =====================================
+          else if (pilihan === "terlama") {
+            berita.sort(function (a, b) {
+              const tanggalA = new Date(a.dataset.date);
+              const tanggalB = new Date(b.dataset.date);
+
+              return tanggalA - tanggalB;
+            });
+          }
+
+          // =====================================
+          // TAMPILKAN KEMBALI BERITA
+          // =====================================
+          berita.forEach(function (item) {
+            containerBerita.appendChild(item);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
+```
